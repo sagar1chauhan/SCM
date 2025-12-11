@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-text="${loggedInUser.name}+' | SCM'">Profile Page</title>
+</head>
+
+<body>
+  <div  id="content">
+    <!-- sidebar -->
+
+       <!-- user is logged in :sidebar -->
+    <div th:if="${loggedInUser}">
+        <div th:replace="~{user/sidebar::sidebar}"></div>
+        </div>
+  <div class="sm:pl-64 pt-20" style="height:1000px">
+   <!-- profile card -->
+    <!-- Profile Card Container -->
+<div class="max-w-3xl mx-auto p-4">
+
+  <div
+    class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-700 transition-all duration-300">
+
+    <!-- Top Section -->
+    <div class="flex flex-col sm:flex-row items-center gap-6">
+
+      <!-- Profile Photo -->
+      <div class="relative">
+        <img th:src="@{${loggedInUser.profilePic}}"
+             alt="Profile Picture"
+             class="w-32 h-32 rounded-full object-cover shadow-md border-2 border-blue-500 dark:border-blue-400">
+      </div>
+
+      <!-- Basic Details -->
+      <div class="flex-1 text-center sm:text-left">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white"
+            th:text="${loggedInUser.name}">User Name</h2>
+
+        <p class="text-gray-500 dark:text-gray-300 text-sm mt-1"
+           th:text="${loggedInUser.email}">email@example.com</p>
+
+        <p class="text-blue-600 dark:text-blue-400 text-xs mt-1 font-semibold"
+           th:text="'Provider: ' + ${loggedInUser.provider}">
+          Provider: SELF
+        </p>
+
+      </div>
+    </div>
+
+    <hr class="my-6 border-gray-300 dark:border-gray-700">
+
+    <!-- About Section -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">About</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
+         th:text="${loggedInUser.about}">
+         Lorem ipsum dolor sit amet...
+      </p>
+    </div>
+
+    <hr class="my-6 border-gray-300 dark:border-gray-700">
+
+    <!-- Extra Info Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+      <!-- Phone number -->
+      <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl shadow-sm">
+        <p class="text-xs text-gray-500 dark:text-gray-300">Phone</p>
+        <p class="text-gray-800 dark:text-white font-semibold"
+           th:text="${loggedInUser.phoneNumber}">
+          +91 9999999999
+        </p>
+      </div>
+
+      <!-- Account Status -->
+      <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl shadow-sm">
+        <p class="text-xs text-gray-500 dark:text-gray-300">Account Status</p>
+        <p class="font-semibold"
+           th:text="${loggedInUser.enabled} ? 'Active' : 'Inactive'"
+           th:classappend="${loggedInUser.enabled} ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400' ">
+          Active
+        </p>
+      </div>
+
+      <!-- Email Verified -->
+      <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl shadow-sm">
+        <p class="text-xs text-gray-500 dark:text-gray-300">Email Verified</p>
+        <p class="font-semibold"
+           th:text="${loggedInUser.emailVerified} ? 'Yes' : 'No'"
+           th:classappend="${loggedInUser.emailVerified} ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'">
+          Yes
+        </p>
+      </div>
+
+      <!-- Phone Verified -->
+      <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl shadow-sm">
+        <p class="text-xs text-gray-500 dark:text-gray-300">Phone Verified</p>
+        <p class="font-semibold"
+           th:text="${loggedInUser.phoneVerified} ? 'Yes' : 'No'"
+           th:classappend="${loggedInUser.phoneVerified} ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'">
+          Yes
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+  </div>
+  </div>
+  <script>console.log("profile  page")</script>
+   
+</body>
+</html>

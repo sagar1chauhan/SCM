@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html
+    lang="en"
+    th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+<head>
+  <title>Contact Us</title>
+</head>
+<body>
+<div id="content" class="min-h-screen">
+
+  <section class="py-20 bg-white dark:bg-gray-800 shadow-xl rounded-xl mb-10 text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-blue-600 dark:text-blue-400">
+        We're Here to Help
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
+        Have questions about SCM, need support, or just want to chat? Reach out to our team.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-gray-100 dark:bg-gray-900 rounded-xl">
+    <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      
+      <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-2xl">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send Us a Message</h2>
+        <form method="POST" action="#" class="space-y-4">
+          
+          <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
+          
+          <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
+          
+          <textarea id="message" name="message" rows="5" placeholder="Your Message or Inquiry" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"></textarea>
+          
+          <button type="submit"
+                  class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-3 transition duration-300 dark:focus:ring-blue-800">
+            Submit Inquiry
+          </button>
+        </form>
+      </div>
+
+      <div class="space-y-8 p-6">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Other Ways to Connect</h2>
+        
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-envelope text-blue-600 text-3xl"></i>
+          <div>
+            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">Email Support</h4>
+            <p class="text-gray-600 dark:text-gray-400">support@scm.com</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-phone-alt text-blue-600 text-3xl"></i>
+          <div>
+            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">Phone/WhatsApp</h4>
+            <p class="text-gray-600 dark:text-gray-400">+91 9669002380</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-map-marker-alt text-blue-600 text-3xl"></i>
+          <div>
+            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">Office Location</h4>
+            <p class="text-gray-600 dark:text-gray-400">SCM Headquarters, Digital Plaza, INDORE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script></script>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Contact Page</title>
+</head>
+
+<body>
+  
+  <div id="content">
+    <h1>Welcome to Contact Page</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque ipsa illo deleniti, molestias sequi beatae pariatur laboriosam adipisci minima assumenda! Reprehenderit ea, non iusto aliquid vel totam quae quis veritatis?</p>
+  </div>
+  <script>console.log("Contact page")</script>
+   
+</body>
+</html> -->

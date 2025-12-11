@@ -1,0 +1,45 @@
+<nav th:fragment="user_navbar"
+  class="fixed top-0 left-0 right-0 z-50
+         bg-white border-gray-200 dark:bg-gray-900
+         sm:pl-64 h-16 flex items-center">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 w-full">
+    <!-- Sidebar Toggle Button -->
+    <button data-drawer-target="logo-sidebar"
+      data-drawer-toggle="logo-sidebar"
+      aria-controls="logo-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+        <path clip-rule="evenodd" fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z" />
+      </svg>
+    </button>
+
+    <!-- Brand -->
+    <a class="flex items-center space-x-3">
+      <img th:src="@{'/images/book.png'}" class="w-10 h-auto" alt="SCM Logo" />
+      <span class="text-xl font-semibold text-black dark:text-white">SCM2</span>
+    </a>
+
+    <!-- Right Buttons -->
+    <div class="flex gap-2 md:order-2">
+      <button id="theme_change_button"
+        class="bg-gray-200 px-3 py-2 rounded dark:text-white dark:bg-gray-600">
+        <i class="fa-solid fa-circle-half-stroke"></i><span>Light</span>
+      </button>
+
+      <!-- Profile -->
+      <a th:href="@{'/user/profile'}"
+        class="hidden md:flex items-center bg-green-800 hover:bg-green-900 text-white font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-600 dark:hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+        <span data-th-text="${loggedInUser.name}"></span>
+      </a>
+
+      <!-- Logout -->
+      <a th:href="@{'/do-logout'}"
+        class="hidden md:flex items-center bg-red-800 hover:bg-red-900 text-white font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+        Logout
+      </a>
+    </div>
+  </div>
+</nav>

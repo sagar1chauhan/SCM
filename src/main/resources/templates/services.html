@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html
+    lang="en"
+    th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+<head>
+  <title>SCM Services & Features</title>
+</head>
+<body>
+<div id="content" class="min-h-screen">
+
+  <section class="py-20 bg-blue-600 dark:bg-blue-900 text-white rounded-xl shadow-xl mb-10 text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Everything You Need to Connect</h1>
+      <p class="text-lg md:text-xl max-w-4xl mx-auto">
+        SCM provides a suite of tools designed to make managing your personal and professional contacts efficient and seamless.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white dark:bg-gray-800 rounded-xl mb-10">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">Our Powerful Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg">
+          <i class="fas fa-id-card-alt text-blue-500 text-3xl mt-1"></i>
+          <div>
+            <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-white">Rich Contact Profiles</h3>
+            <p class="text-gray-600 dark:text-gray-400">Store multiple emails, phone numbers, social media links, and detailed notes for every connection.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg">
+          <i class="fas fa-search-plus text-green-500 text-3xl mt-1"></i>
+          <div>
+            <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-white">Advanced Search & Filtering</h3>
+            <p class="text-gray-600 dark:text-gray-400">Instantly locate contacts using robust search functionality based on any detail.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg">
+          <i class="fas fa-tachometer-alt text-red-500 text-3xl mt-1"></i>
+          <div>
+            <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-white">Personalized Dashboard</h3>
+            <p class="text-gray-600 dark:text-gray-400">Get an overview of your recent activity and most frequent contacts right on your dashboard.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg">
+          <i class="fas fa-cloud-upload-alt text-yellow-500 text-3xl mt-1"></i>
+          <div>
+            <h3 class="text-xl font-semibold mb-1 text-gray-900 dark:text-white">Secure Image Storage</h3>
+            <p class="text-gray-600 dark:text-gray-400">Upload profile pictures for your contacts to easily recognize them at a glance.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-10 my-10 bg-blue-50 dark:bg-gray-700 rounded-xl shadow-inner max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-3 text-gray-900 dark:text-white">
+      Start Managing Your Network Now.
+    </h2>
+    <p class="mb-6 text-gray-700 dark:text-gray-300">
+      Basic access is always free. See what SCM can do for you.
+    </p>
+    <a th:href="@{/register}" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-xl px-10 py-4 transition duration-300 dark:focus:ring-green-800">
+      Join SCM Free
+    </a>
+  </section>
+
+</div>
+<script></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Services Page</title>
+</head>
+<body>
+    <section id="content">
+        <h1>Welcome to services page</h1>
+        <h2>services offerd by SCM</h2>
+    </section>
+      <script>console.log("service page")</script>
+</body>
+</html> -->
