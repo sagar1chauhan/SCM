@@ -1,0 +1,8 @@
+package com.scm.validators;
+import jakarta.validation.ConstraintValidator;
+
+
+
+public class FileValidator implements ConstraintValidator {
+
+}

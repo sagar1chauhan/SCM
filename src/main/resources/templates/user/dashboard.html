@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"
+      th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | SCM</title>
+</head>
+
+<body>
+<div id="content">
+
+    <!-- Sidebar -->
+    <div th:replace="~{user/sidebar :: sidebar}"></div>
+
+    <div class="sm:pl-64 pt-20 p-6">
+
+        <h1 class="text-3xl font-bold text-black dark:text-white">
+            Welcome, <span th:text="${loggedInUser.name}"></span> 👋
+        </h1>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+
+            <div class="p-6 bg-blue-600 text-white rounded-2xl shadow-lg">
+                <h3 class="text-xl font-semibold">Total Contacts</h3>
+                <p class="text-4xl font-bold mt-3" th:text="${totalContacts}"></p>
+            </div>
+
+            <div class="p-6 bg-green-600 text-white rounded-2xl shadow-lg">
+                <h3 class="text-xl font-semibold">Favorite Contacts</h3>
+                <p class="text-4xl font-bold mt-3" th:text="${favContacts}"></p>
+            </div>
+
+            <div class="p-6 bg-purple-600 text-white rounded-2xl shadow-lg">
+                <h3 class="text-xl font-semibold">Recent Contacts</h3>
+                <ul class="mt-3 space-y-2">
+                    <li th:each="c : ${recentContacts}"
+                        class="text-lg font-medium"
+                        th:text="${c.name}">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- User Profile -->
+        <div class="mt-10 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-2xl">
+            <h2 class="text-2xl font-bold text-black dark:text-white">Your Profile</h2>
+            <p class="text-gray-700 dark:text-gray-300 mt-2">
+                Email: <span th:text="${loggedInUser.email}"></span>
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">
+                Phone: <span th:text="${loggedInUser.phoneNumber}"></span>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>console.log("Dashboard Loaded")</script>
+<script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+
+</body>
+</html>

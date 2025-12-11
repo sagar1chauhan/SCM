@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Home Page</title>
+</head>
+
+<body>
+  
+  <div id="content" class="text center items-center md:w-1/2 mx-auto pt-5 mt-20">
+   <div th:replace="~{message::messagebox}"></div>
+   <a  href="/login" class="bg-green-900 mt-2 text-white px- py-2 rounded">Login</a>
+ 
+</div>
+  <script>console.log("Home page")</script>
+   
+</body>
+</html>
